@@ -1,0 +1,186 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNnguIGubu9cr6zHR8yCrZB",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ElvinGuluzade/my_second_repo/blob/main/Aze%20encrypt\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "dr7Bx8S43xd2"
+      },
+      "outputs": [],
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def encrypter(x):\n",
+        "  new_text = \"\"\n",
+        "  for i in range(len(x)):\n",
+        "    letter = x[i]\n",
+        "    if letter == 'a':\n",
+        "      letter = 'b'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'b':\n",
+        "      letter = 'c'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'c':\n",
+        "      letter = 'ç'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'ç':\n",
+        "      letter = 'd'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'd':\n",
+        "      letter = 'e'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'e':\n",
+        "      letter = 'ə'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'ə':\n",
+        "      letter = 'f'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'f':\n",
+        "      letter = 'g'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'g':\n",
+        "      letter = 'ğ'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'ğ':\n",
+        "      letter = 'h'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'h':\n",
+        "      letter = 'x'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'x':\n",
+        "      letter = 'ı'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'ı':\n",
+        "      letter = 'i'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'i':\n",
+        "      letter = 'j'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'j':\n",
+        "      letter = 'k'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'k':\n",
+        "      letter = 'q'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'q':\n",
+        "      letter = 'l'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'l':\n",
+        "      letter = 'm'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'm':\n",
+        "      letter = 'n'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'n':\n",
+        "      letter = 'o'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'o':\n",
+        "      letter = 'ö'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'ö':\n",
+        "      letter = 'p'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'p':\n",
+        "      letter = 'r'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'r':\n",
+        "      letter = 's'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 's':\n",
+        "      letter = 'ş'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'ş':\n",
+        "      letter = 't'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 't':\n",
+        "      letter = 'u'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'u':\n",
+        "      letter = 'ü'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'ü':\n",
+        "      letter = 'v'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'v':\n",
+        "      letter = 'y'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'y':\n",
+        "      letter = 'z'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == 'z':\n",
+        "      letter = 'a'\n",
+        "      new_text = new_text + letter\n",
+        "    elif letter == ' ':\n",
+        "      new_text = new_text + letter\n",
+        "  return new_text"
+      ],
+      "metadata": {
+        "id": "j0jM_Jk_372J"
+      },
+      "execution_count": 7,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "encrypter('mende sigar iki cahan')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "NPXlpfgd-Ahv",
+        "outputId": "7fe64da1-a80d-4ead-ff97-5cd40f4f4ec8"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'nəoeə şjğbs jqj çbxbo'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    }
+  ]
+}
